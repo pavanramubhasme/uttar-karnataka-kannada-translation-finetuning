@@ -1,0 +1,41 @@
+[project]
+name = "mistral-qlora-finetuning"
+version = "0.1.0"
+description = "Production-style QLoRA fine-tuning pipeline using Mistral, PEFT and TRL"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "accelerate",
+    "bitsandbytes",
+    "datasets",
+    "huggingface-hub",
+    "langchain>=1.4.9",
+    "langchain-community>=0.4.2",
+    "peft",
+    "python-dotenv",
+    "sacrebleu>=2.6.0",
+    "sentence-transformers>=6.2.0",
+    "sentencepiece",
+    "torch==2.12.1",
+    "transformers",
+    "trl",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["fine_tuning"]
+
+[tool.uv]
+package = true
+
+[[tool.uv.index]]
+name = "pytorch-cu132"
+url = "https://download.pytorch.org/whl/cu132"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu132" }

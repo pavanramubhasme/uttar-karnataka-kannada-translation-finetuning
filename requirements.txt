@@ -1,0 +1,9 @@
+langchain
+langchain-community
+accelerate
+peft
+bitsandbytes
+transformers
+trl
+torch
+sentence-transformers

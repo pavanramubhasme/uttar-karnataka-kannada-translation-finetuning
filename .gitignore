@@ -1,0 +1,38 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Generated package metadata
+*.egg-info/
+
+# Model checkpoints and weights
+outputs/
+runs/
+logs/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Datasets
+data/
+vaani_uttara_karnataka/
+
+# Secrets
+.env
+.env.*
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
